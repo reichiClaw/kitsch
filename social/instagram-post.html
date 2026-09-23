@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <title>KITSCH – Instagram-Post (1080 × 1350)</title>
+  <style>
+    /* Vorlage für den Instagram-Feed-Post im Format 4:5.
+       Rendern: Fenster exakt 1080 × 1350 px, Screenshot ohne Scrollbalken. */
+    :root {
+      --paper:       #f3eee5;
+      --paper-light: #f7f3ec;
+      --paper-deep:  #e5ddcf;
+      --ink:         #24201d;
+      --ink-soft:    #4a443f;
+      --ink-muted:   #8c837a;
+      --accent-soft: rgba(230, 0, 126, 0.42);
+      --accent-haze: rgba(230, 0, 126, 0.035);
+      --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua",
+               "Hoefler Text", Baskerville, Georgia, "Liberation Serif", "Times New Roman", serif;
+      --sans:  -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Inter,
+               "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+    html, body { margin: 0; padding: 0; }
+
+    body {
+      width: 1080px;
+      height: 1350px;
+      overflow: hidden;
+      position: relative;
+      color: var(--ink);
+      font-family: var(--sans);
+      -webkit-font-smoothing: antialiased;
+      background-color: var(--paper);
+      background-image:
+        radial-gradient(60% 42% at 50% 38%, var(--accent-haze), rgba(230, 0, 126, 0) 100%),
+        radial-gradient(130% 105% at 50% 40%, var(--paper-light) 0%, var(--paper) 42%, var(--paper-deep) 100%);
+    }
+
+    body::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.055;
+      mix-blend-mode: multiply;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23p)'/%3E%3C/svg%3E");
+      background-size: 240px 240px;
+    }
+
+    .post {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      /* Inhalt leicht oberhalb der Mitte, wie auf der Website */
+      padding: 210px 120px 0;
+    }
+
+    .post__logo {
+      width: 250px;
+      height: 250px;
+      display: block;
+      margin-bottom: 96px;
+    }
+
+    .post__title {
+      margin: 0;
+      font-family: var(--serif);
+      font-weight: 400;
+      font-size: 76px;
+      line-height: 1.16;
+      letter-spacing: -0.005em;
+      max-width: 760px;
+    }
+
+    .post__title::after {
+      content: "";
+      display: block;
+      width: 56px;
+      height: 2px;
+      margin: 56px auto;
+      background: var(--accent-soft);
+    }
+
+    .post__text {
+      margin: 0;
+      max-width: 700px;
+      font-size: 31px;
+      line-height: 1.6;
+      color: var(--ink-soft);
+      text-wrap: balance;
+    }
+
+    .post__closing {
+      margin: 72px 0 0;
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 38px;
+      line-height: 1.45;
+      color: var(--ink);
+    }
+  </style>
+</head>
+<body>
+  <div class="post">
+    <img class="post__logo" src="../assets/kitsch-logo.png" alt="KITSCH Zürs – Logo">
+    <h1 class="post__title">Danke für zwei besondere Jahre.</h1>
+    <p class="post__text">Leider wird es für das KITSCH keine dritte Saison geben. Was bleibt, sind wunderbare Erinnerungen&nbsp;– und die Dankbarkeit, dass ihr Teil davon wart.</p>
+    <p class="post__closing">Von Herzen,<br>euer KITSCH-Team</p>
+  </div>
+</body>
+</html>

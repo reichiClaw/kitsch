@@ -27,6 +27,15 @@ Die Datei wird außerdem als Favicon verwendet.
 Den Inhalt dieses Verzeichnisses (`index.html`, `style.css`, `assets/`) unverändert in das
 Web-Root eines beliebigen Webservers legen. Es sind keine weiteren Schritte nötig.
 
+## Instagram-Post
+
+Im Ordner `social/` liegt ein passender Feed-Post in derselben Gestaltung:
+
+- `instagram-post.png` – fertiges Bild, 1080 × 1350 px (4:5)
+- `instagram-caption.txt` – Begleittext und Alt-Text zum Einfügen
+- `instagram-post.html` – Vorlage; bei Änderungen in einem Browserfenster von exakt
+  1080 × 1350 px öffnen und als Screenshot exportieren
+
 ## Rechtliches
 
 Die Links am unteren Seitenrand zeigen auf die bestehenden, geprüften Seiten der bisherigen Website:
